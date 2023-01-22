@@ -22,6 +22,7 @@ body {
   color: #d9d9e3;
 }
 
+
 .App-link {
   color: #61dafb;
 }
@@ -44,20 +45,33 @@ body {
 
 #sub-title {
   font-size: 1.5rem;
-  /* color: #6db2f2; */
-  color: rgb(180, 116, 218);
+
+  color: #6DB2F2;
+}
+
+.form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 #topic-form {
+  background-color: #D9DADB;
+  stroke: none;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #header-title {
   padding-left: 4rem;
 }
 
+
 #topic-textbox {
   height: 2rem;
+  width: 300px;
 }
 
 #send_icon {

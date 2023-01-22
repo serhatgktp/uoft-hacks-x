@@ -1,6 +1,5 @@
 from flask import Flask, request, make_response, jsonify
 from flask_cors import CORS, cross_origin   # For handling cross-origin requests
-import requests
 import event_bus
 
 # Initialize Flask App
@@ -18,7 +17,6 @@ def get_convo():
     if (content_type == 'application/json'):
         json = r.json
         topic = json['topic']
-
     else:
         topic = r.form['topic']
 

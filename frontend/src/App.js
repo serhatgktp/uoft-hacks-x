@@ -5,7 +5,8 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 import { Form, useFormik } from "formik";
-
+import { useRef } from 'react';
+import { useEffect } from 'react';
 import Box from '@mui/material/Box';
 import { Button } from '@mui/material';
 import Fade from '@mui/material/Fade';
@@ -16,6 +17,7 @@ import send_icon from './assets/sent.png'
 import { useState } from 'react';
 
 function App() {
+  const txt= useRef(null)
   const [json,setJson] = useState({})
   const [right,setRight] = useState("")
   const [left,setLeft] = useState("")
@@ -37,37 +39,27 @@ function App() {
         });
     },
   });
+  const show = submit
+ 
   return (
   
-   
-    
     <div className="App">
-    
       <header className="App-header">
         <p id='header-title'>Controversy.io</p>
       </header>
       <div className='main-container'>
-        <h1 id="controversy-title">Co:ntroversy</h1>
+        <h1 id="controversy-title">Controversy.io</h1>
         <h3 id="sub-title">Access all sides of the argument, delivered by AI</h3>
-         {/* <Fade in={submit === false} timeout={2000}>
+         <Fade in={submit === false} timeout={2000}>
          <form className="topic-form" action="/action_page.php">
          <Box>
-         <TextField id="outlined-basic"  variant="standard" sx={{bgcolor:"white", mx:3, width: '20vw'}} />   
-         <Button variant="contained" size="small"  onClick={()=>setSubmit(true)} disabled={!setSubmit}> submit 
+         <TextField ref={txt} id="outlined-basic"  variant="standard" sx={{bgcolor:"white", mx:3, width: '20vw'}} />   
+         <Button variant="contained" size="small"  onClick={()=>{setTimeout(() => {setSubmit(true)}, 7000)}} disabled={!setSubmit}> submit 
          </Button>
          </Box>
          </form> 
-         </Fade> */}
-        
-        {!submit &&<Box>
-        {/* <Form onSubmit={formik.handleSubmit}>
-        <TextField id="outlined-basic"  name="prompt"  type="prompt" variant="standard" sx={{bgcolor:"white", mx:3, width: '20vw'}} onChange={formik.handleChange}/>   
-        <Button variant="contained" size="small"  onClick={()=>{setSubmit(true); 
-                  }} disabled={!setSubmit} type="submit"> submit 
-        </Button>
-        </Form> */}
-      
-      <form onSubmit={formik.handleSubmit}>
+         </Fade>
+      {/* <form onSubmit={formik.handleSubmit}>
        <input
          id="p"
          name="p"
@@ -77,17 +69,20 @@ function App() {
        />
        <button type="submit">Submit</button>
        </form>
-        </Box> }
-         
-        
-       
+        </Box> } */}
       </div>
-      
-      <Box sx = {{display: 'flex', mt : '5vh', justifyContent: 'center', alignContent: 'center'}}>
-          <OutlinedCard content="d"></OutlinedCard>
-          <OutlinedCard content="d"></OutlinedCard>
-          <OutlinedCard content="d"></OutlinedCard>
+      <Fade in={show === true} timeout={4000}>
+       <Box>
+        <Box sx = {{display: 'flex', mt : '5vh', justifyContent: 'center', alignContent: 'center'}}>
+            <OutlinedCard name ="Positive Argument" data  ></OutlinedCard>
+            <OutlinedCard name ="Neutral Argument" data ></OutlinedCard>
+            <OutlinedCard name ="Negative Argument" data ></OutlinedCard>
         </Box>
+        <Button sx = {{mt:'1.5vh', mb: '1.5vh'}} variant="contained" size="medium" onClick={()=>setSubmit(false)}> Try Again 
+        </Button>
+        </Box>
+      </Fade>
+      
     </div>
 
   )

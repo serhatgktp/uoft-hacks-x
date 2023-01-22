@@ -28,8 +28,6 @@ button:focus {
   color: #ffffff;
 }
 
-
-
 .App-link {
   color: #61dafb;
 }
@@ -44,7 +42,7 @@ button:focus {
 }
 
 #controversy-title {
-  padding-top: 2rem;
+  
   font-size: 7rem;
   margin-bottom: 2rem;
   text-shadow:#6DB2F2 2px 5px;;

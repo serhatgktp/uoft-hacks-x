@@ -17,6 +17,9 @@ import { useState } from 'react';
 
 function App() {
   const [json,setJson] = useState({})
+  const [right,setRight] = useState("")
+  const [left,setLeft] = useState("")
+  const [mid,setMid] = useState("")
   const [submit, setSubmit] = useState(false);
   const formik = useFormik({
     initialValues: {
@@ -24,7 +27,7 @@ function App() {
     },
     onSubmit: (values) => {
       fetch("http://localhost:5000/", {
-        method: "POST",
+        method: "GET",
         body: JSON.stringify({topic : values.p}),
         headers: { "Content-Type": "application/json" },
       })
@@ -81,9 +84,9 @@ function App() {
       </div>
       
       <Box sx = {{display: 'flex', mt : '5vh', justifyContent: 'center', alignContent: 'center'}}>
-          <OutlinedCard></OutlinedCard>
-          <OutlinedCard></OutlinedCard>
-          <OutlinedCard></OutlinedCard>
+          <OutlinedCard content="d"></OutlinedCard>
+          <OutlinedCard content="d"></OutlinedCard>
+          <OutlinedCard content="d"></OutlinedCard>
         </Box>
     </div>
 

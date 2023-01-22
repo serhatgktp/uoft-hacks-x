@@ -18,7 +18,7 @@ function App() {
  
   return (
     <div className="App">
-      {!submit && <Box >
+       <Box >
       <header className="App-header">
         <p id='header-title'>Controversy.io</p>
       </header>
@@ -26,17 +26,22 @@ function App() {
         <h1 id="controversy-title">Co:ntroversy</h1>
         <h3 id="sub-title">Access all sides of the argument, delivered by AI</h3>
         <form className="topic-form" action="/action_page.php">
+        {!submit &&<Box>
         <TextField id="outlined-basic"  variant="standard" sx={{bgcolor:"white", mx:3, width: '20vw'}} />   
-        <Button variant="contained" size="small"  onClick={()=>setSubmit(true)} disabled={!setSubmit}> submit </Button>
-        {console.log(submit)}
+        <Button variant="contained" size="small"  onClick={()=>setSubmit(true)} disabled={!setSubmit}> submit 
+        </Button>
+        </Box>}
         </form> 
-        <Box sx = {{display: 'flex', mt : '5vh', justifyContent: 'center', alignContent: 'center'}}>
+        
+       
+      </div>
+      </Box>
+      <Box sx = {{display: 'flex', mt : '5vh', justifyContent: 'center', alignContent: 'center'}}>
           <OutlinedCard></OutlinedCard>
           <OutlinedCard></OutlinedCard>
           <OutlinedCard></OutlinedCard>
         </Box>
-      </div>
-      </Box>}
+        
     </div>
   );
 }

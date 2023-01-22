@@ -1,7 +1,13 @@
 body {
-  background-color: #343541;
+  background-color: #FDFDFD;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
 .App {
   text-align: center;
   
@@ -9,8 +15,8 @@ body {
 
 .App-header {
   /* background-color: #d9dadb; */
-  background-color: #343541;
-  border-bottom: 1px solid rgb(88, 86, 86);
+  background-color: #D9DADB;
+  border-bottom: none;
   max-height: 8vh;
   display: flex;
   flex-direction: row;
@@ -18,9 +24,10 @@ body {
   text-align: left !important;
   justify-content: left;
   font-size: calc(5px + 2vmin);
-  color: rgb(161, 71, 212); 
-  color: #d9d9e3;
+  /* color: rgb(161, 71, 212); */
+  color: #000000;
 }
+
 
 
 .App-link {
@@ -40,7 +47,7 @@ body {
   padding-top: 2rem;
   font-size: 7rem;
   margin-bottom: 2rem;
-  color: #d9d9e3;
+  color: #000000;
 }
 
 #sub-title {
@@ -68,6 +75,7 @@ body {
 #header-title {
   padding-left: 4rem;
 }
+
 
 
 #topic-textbox {

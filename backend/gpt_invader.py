@@ -50,7 +50,7 @@ def get_gpt_response(topic, mode='rw',):
     # Enter prompt
     pag.write(in_prompt)
     pag.press('enter')    
-    time.sleep(20)
+    time.sleep(30)
 
     # Select entire response via triple-click
     pag.moveTo(x1, y1, duration = 0.6)

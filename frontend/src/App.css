@@ -1,0 +1,88 @@
+body {
+  background-color: #FDFDFD;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+.App {
+  text-align: center;
+  
+}
+
+.App-header {
+  /* background-color: #d9dadb; */
+  background-color: #6db2f28a;
+  border-bottom: none;
+  max-height: 8vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left !important;
+  justify-content: left;
+  font-size: calc(5px + 2vmin);
+  /* color: rgb(161, 71, 212); */
+  color: #ffffff;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#controversy-title {
+  
+  font-size: 7rem;
+  margin-bottom: 2rem;
+  text-shadow:#6DB2F2 2px 5px;;
+  color: #000000;
+}
+
+#sub-title {
+  font-size: 1.5rem;
+  color: #6DB2F2;
+}
+
+.form-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+#topic-form {
+  background-color: #D9DADB;
+  stroke: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#header-title {
+  padding-left: 4rem;
+}
+
+
+
+#topic-textbox {
+  height: 2rem;
+  width: 300px;
+}
+
+#send_icon {
+  height: 2.5rem;
+  width:  2.5rem;
+  padding-left: 1rem;
+}

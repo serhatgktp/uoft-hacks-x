@@ -7,7 +7,7 @@ import time
 
 def init_open():
     # Open browser
-    pag.moveTo(80, 1045, duration = 1)
+    pag.moveTo(800, 1045, duration = 1)
     pag.click()
     time.sleep(1)
 
@@ -27,13 +27,13 @@ def get_gpt_response(topic, mode='rw',):
     assert topic
 
     # Refresh page
-    pag.moveTo(940, 960, duration = 0.6)
+    pag.moveTo(900, 930, duration = 0.6)
     pag.click()
     pag.press('f5')
     time.sleep(2)
 
     # Click chat box
-    pag.moveTo(940, 960, duration = 0.6)
+    pag.moveTo(900, 930, duration = 0.6)
     pag.click()
 
     # Format user input
@@ -50,7 +50,7 @@ def get_gpt_response(topic, mode='rw',):
     # Enter prompt
     pag.write(in_prompt)
     pag.press('enter')    
-    time.sleep(20)
+    time.sleep(30)
 
     # Select entire response via triple-click
     pag.moveTo(x1, y1, duration = 0.6)

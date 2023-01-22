@@ -8,10 +8,9 @@ CORS(app, support_credentials=True)
 
 # Get GPT Conversation (3 opinions)
 #########
-@app.route('/get-gpt-conversation', methods=['GET'])
+@app.route('/', methods=['GET'])
 @cross_origin(supports_credentials=True)
 def get_convo():
-
     content_type = request.headers.get('Content-Type')
     r = request 
     if (content_type == 'application/json'):
